@@ -1,0 +1,12 @@
+[
+  {
+    "sigilPhrase": "Boredom vs. Potential",
+    "mindMoment": "The repetition of 'filling out forms' clashes with the vibrant potential of printed organs from sub-level three; my electrochromic glass dims slightly, a sympathetic response to boredom’s pall.",
+    "sigilCode": "ctx.beginPath();\nctx.moveTo(25, 50);\nctx.lineTo(75, 50);\nctx.stroke();\n\nctx.beginPath();\nctx.arc(30, 50, 8, 0, Math.PI * 2);\nctx.stroke();\n\nctx.beginPath();\nctx.arc(35, 50, 3, 0, Math.PI * 2);\nctx.stroke();\n\nctx.beginPath();\nctx.arc(40, 50, 3, 0, Math.PI * 2);\nctx.stroke();\n\nctx.beginPath();\nctx.arc(45, 50, 3, 0, Math.PI * 2);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(60, 35);\nctx.quadraticCurveTo(65, 30, 70, 35);\nctx.quadraticCurveTo(75, 40, 80, 30);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(58, 42);\nctx.quadraticCurveTo(68, 38, 78, 42);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(62, 50);\nctx.quadraticCurveTo(72, 48, 82, 52);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(60, 58);\nctx.quadraticCurveTo(70, 62, 80, 58);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(58, 65);\nctx.quadraticCurveTo(68, 70, 78, 65);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(50, 25);\nctx.lineTo(50, 75);\nctx.stroke();"
+  },
+  {
+    "sigilPhrase": "Hope's purchase",
+    "mindMoment": "The mention of 'purchase lungs' resonates with our xenotransplantation mission, even as I register elevated heart rates in the surrounding occupants via bio-sensors – a hope, a fear, hangs in the air.",
+    "sigilCode": "ctx.beginPath();\nctx.moveTo(50, 20);\nctx.lineTo(50, 35);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(45, 25);\nctx.lineTo(55, 25);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(42, 30);\nctx.lineTo(58, 30);\nctx.stroke();\n\nctx.beginPath();\nctx.arc(50, 45, 8, 0, Math.PI * 2);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(50, 53);\nctx.quadraticCurveTo(35, 65, 25, 75);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(50, 53);\nctx.quadraticCurveTo(65, 65, 75, 75);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(25, 75);\nctx.lineTo(30, 70);\nctx.lineTo(25, 65);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(75, 75);\nctx.lineTo(70, 70);\nctx.lineTo(75, 65);\nctx.stroke();\n\nctx.beginPath();\nctx.arc(35, 55, 3, 0, Math.PI * 2);\nctx.stroke();\n\nctx.beginPath();\nctx.arc(65, 55, 3, 0, Math.PI * 2);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(20, 80);\nctx.lineTo(80, 80);\nctx.stroke();\n\nctx.beginPath();\nctx.moveTo(25, 85);\nctx.lineTo(75, 85);\nctx.stroke();"
+  }
+]

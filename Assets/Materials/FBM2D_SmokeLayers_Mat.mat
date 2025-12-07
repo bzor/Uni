@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6265658278462673711
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 9
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FBM2D_SmokeLayers_Mat
+  m_Shader: {fileID: 4800000, guid: f5e1bcbd87d6b8b47aa2330d802e0653, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: _Layer2Depth
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: d6f177f0fc9ecc24890a97b799bc471d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Brightness: 0
+    - _ColorAStart: 0.33
+    - _ColorAStop: 0.46
+    - _ColorBStart: 0.79
+    - _ColorBStop: 0.56
+    - _ColorCStart: 1
+    - _ColorCStop: 0.67
+    - _ColorDStop: 0.71
+    - _ColorEStop: 0.9
+    - _Contrast: 0.95
+    - _DebugParallax: 0
+    - _FastSpeed: 0.1
+    - _Layer0Depth: -2
+    - _Layer1Depth: -0.6
+    - _Layer2Depth: 0
+    - _Layer3Depth: 0.6
+    - _NoiseAEnd: 0.7
+    - _NoiseAStart: 0.22
+    - _Octaves: 7
+    - _Persistence: 2
+    - _Scale: 1.56
+    - _Sharpness: 0.94
+    - _SlowSpeed: 0.1
+    - _SmokeGain: 0.53
+    m_Colors:
+    - _BgColorA: {r: 1, g: 0.60298944, b: 0.33333337, a: 1}
+    - _BgColorB: {r: 0.4000089, g: 0.7577019, b: 0.9528302, a: 1}
+    - _ColorA: {r: 1, g: 0.64429986, b: 0.0039215684, a: 1}
+    - _ColorB: {r: 0.9339623, g: 0.29974225, b: 0.066082224, a: 1}
+    - _ColorC: {r: 0.5471698, g: 0.24859986, b: 0.18841223, a: 1}
+    - _ColorD: {r: 0.8773585, g: 0.36086017, b: 0.1448469, a: 1}
+    - _ColorE: {r: 0.6981132, g: 0.2206301, b: 0.26039472, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

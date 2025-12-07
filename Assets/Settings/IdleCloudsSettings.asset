@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e05f6372392cda4681829049efdaac7, type: 3}
+  m_Name: IdleCloudsSettings
+  m_EditorClassIdentifier: Assembly-CSharp::CloudColorSettings
+  color1: {r: 0, g: 0.9333334, b: 1, a: 1}
+  color2: {r: 0.5424528, g: 1, b: 0.75319713, a: 1}
+  color3: {r: 0.37184957, g: 0.17061234, b: 0.509434, a: 1}
+  color4: {r: 0.35161614, g: 0.3292542, b: 0.46226418, a: 1}
+  bgColBottom: {r: 0.12175152, g: 0.12904948, b: 0.1509434, a: 1}
+  bgColTop: {r: 0.19891421, g: 0.2453168, b: 0.2830189, a: 1}
+  timeScale: 0.21
+  transparentColor1: {r: 0.16553932, g: 0.2477944, b: 0.3773585, a: 1}
+  transparentColor2: {r: 0.30740476, g: 0.3563718, b: 0.41509432, a: 1}
+  transparentColor3: {r: 0.21596561, g: 0.09603061, b: 0.24528301, a: 1}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e05f6372392cda4681829049efdaac7, type: 3}
+  m_Name: SunsetCloudsSettings
+  m_EditorClassIdentifier: Assembly-CSharp::CloudColorSettings
+  color1: {r: 0.31585974, g: 0.6867014, b: 0.735849, a: 1}
+  color2: {r: 1, g: 0.050980393, b: 0.23137255, a: 1}
+  color3: {r: 0.6117647, g: 0, b: 0, a: 1}
+  color4: {r: 0.754717, g: 0.252759, b: 0.32059118, a: 1}
+  bgColBottom: {r: 0.8396226, g: 0.5016717, b: 0.1544589, a: 1}
+  bgColTop: {r: 0.26610893, g: 0.3491014, b: 0.49056602, a: 1}
+  timeScale: 1
+  transparentColor1: {r: 0.7924528, g: 0.3074005, b: 0.16820934, a: 1}
+  transparentColor2: {r: 0.041429326, g: 0.2939302, b: 0.46226418, a: 1}
+  transparentColor3: {r: 0.8773585, g: 0.15312389, b: 0.3301959, a: 1}

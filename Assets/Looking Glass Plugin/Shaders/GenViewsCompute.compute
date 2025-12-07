@@ -1,0 +1,114 @@
+#pragma kernel CSMain
+
+#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
+#pragma multi_compile _ GEN_VIEWS_ON
+#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/LookingGlass/LookingGlassSettings.hlsl"
+
+// RWTexture2DArray<float4> Result;
+RWTexture2DArray<float> DepthResult;
+
+// Texture2DArray<float4> Source;
+Texture2DArray<float> DepthSource;
+
+float lkg_nearClip;
+float lkg_farClip;
+float lkg_focalDist;
+float lkg_focalDistInv;
+float lkg_perspW;
+float lkg_maxOffset;
+float4x4 lkg_projMat;
+float4 lkg_linearDepthParamsReversedZ;
+float4 lkg_linearDepthParams;
+
+half MyLinearEyeDepth(half rawdepth) {
+    half rd = max(rawdepth, 0.0001);
+#if UNITY_REVERSED_Z
+    return 1.0 / (lkg_linearDepthParamsReversedZ.z * rd + lkg_linearDepthParamsReversedZ.w);
+#else
+    return 1.0 / (lkg_linearDepthParams.z * rd + lkg_linearDepthParams.w);
+#endif
+}
+
+half MyLinear01Depth (half ed) {
+    return (ed - lkg_nearClip) / (lkg_farClip - lkg_nearClip);
+}
+
+#define UV_OFFSET_AT_DIST(dist, offset) (-(offset * (dist - lkg_focalDist) * lkg_focalDistInv) * 0.5 / dist * lkg_projMat[0][0])
+
+[numthreads(1,32,8)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    // float4 col = DepthSource.Load(int4(id.xyz, 0));
+    // col.rgb = 1.0 - col.rgb;
+
+    int3 dims;
+    DepthSource.GetDimensions(dims.x, dims.y, dims.z);
+    float offsetBase = (0.5 / (LKG_VIEWCOUNT - 1)) * lkg_maxOffset * 2;
+
+    uint3 coord = uint3(id.xyz);
+
+    // clear
+    int x = 0;
+    for (x = 0; x < dims.x; x++)
+    {
+        uint3 coordLocal = coord + uint3(x, 0, 0);
+        // Result[coordLocal] = 0;
+        DepthResult[coordLocal] = 0;
+        // Result[coordLocal] = Source.Load(int4(coordLocal, 0));
+        // DepthResult[coordLocal] = DepthSource.Load(int4(coordLocal, 0)).r;
+    }
+
+    // // actually start from the other side, cause we'll overwrite
+    // for (x = dims.x - 1; x >= 0; x--)
+    // // for (x = 0; x < dims.x; x++)
+    // {
+
+    //     // if (uint(x) % 2 == 0) continue;
+    //     uint3 coord = id.xyz + uint3(x, 0, 0);
+    //     float offsetSide = offsetBase;
+    //     float depth = DepthSource.Load(int4(coord + int3(0,0,1), 0)).r;
+    //     float offset = UV_OFFSET_AT_DIST(MyLinearEyeDepth(depth), offsetSide);
+    //     uint3 offsetCoord = coord + int3(offset * dims.x, 0, 0);
+    //     // uint3 offsetCoord = coord;
+    //     float4 col = Source.Load(int4(coord + int3(0,0,1), 0));
+
+    //     Result[offsetCoord] = col;
+    //     DepthResult[offsetCoord] = depth;
+    // }
+
+    // for (x = 0; x < dims.x; x++)
+    // // for (x = dims.x - 1; x >= 0; x--)
+    // {
+    //     // if (uint(x) % 2 == 0) continue;
+    //     uint3 coordLocal = coord + uint3(x, 0, 0);
+    //     float offsetSide = offsetBase;
+    //     float depth = DepthSource.Load(int4(coordLocal + int3(0,0,1), 0)).r;
+    //     float offset = UV_OFFSET_AT_DIST(MyLinearEyeDepth(depth), offsetSide);
+    //     uint3 offsetCoord = coordLocal + int3(offset * dims.x, 0, 0);
+    //     // uint3 offsetCoord = coordLocal;
+    //     float4 col = Source.Load(int4(coordLocal + int3(0,0,1), 0));
+
+    //     Result[offsetCoord] = col;
+    //     DepthResult[offsetCoord] = depth;
+    // }
+
+    // first side
+
+    for (x = 0; x < dims.x; x++)
+    // for (x = dims.x - 1; x >= 0; x--)
+    {
+        // if (uint(x) % 2 == 0) continue;
+        uint3 coordLocal = coord + uint3(x, 0, 0);
+        float offsetSide = -offsetBase;
+        float depth = DepthSource.Load(int4(coordLocal, 0)).r;
+        float offset = UV_OFFSET_AT_DIST(MyLinearEyeDepth(depth), offsetSide);
+        uint3 offsetCoord = coordLocal + int3(offset * dims.x, 0, 0);
+        // uint3 offsetCoord = coordLocal;
+        // float4 col = Source.Load(int4(coordLocal, 0));
+
+        float presentDepth = DepthSource.Load(int4(offsetCoord, 0)).r;
+        // Result[offsetCoord] = col;
+        DepthResult[offsetCoord] = depth - presentDepth > 1/40.0;
+        // DepthResult[offsetCoord] = abs(depth - presentDepth) > 1/40.0;
+    }
+}

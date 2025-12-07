@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1d1dbc8e87859458d49db91033ebc6, type: 3}
+  m_Name: Multiview Data
+  m_EditorClassIdentifier: 
+  cal:
+    configVersion: 3.0
+    serial: LKG-H00001
+    pitch:
+      value: 44.751682
+    slope:
+      value: -7.4319034
+    center:
+      value: 0.2658186
+    fringe:
+      value: 0
+    viewCone:
+      value: 50
+    invView:
+      value: 1
+    verticalAngle:
+      value: 0
+    DPI:
+      value: 283
+    screenW:
+      value: 2160
+    screenH:
+      value: 3840
+    flipImageX:
+      value: 0
+    flipImageY:
+      value: 0
+    flipSubp:
+      value: 0
+    CellPatternMode:
+      value: 4
+    subpixelCells:
+    - ROffsetX: -0.25
+      ROffsetY: -0.31
+      GOffsetX: -0.25
+      GOffsetY: 0.28
+      BOffsetX: 0.25
+      BOffsetY: 0
+    - ROffsetX: 0.25
+      ROffsetY: -0.31
+      GOffsetX: 0.25
+      GOffsetY: 0.28
+      BOffsetX: -0.25
+      BOffsetY: 0
+  colorRt: {fileID: 0}
+  colorRt2: {fileID: 0}
+  colorRtFinal: {fileID: 0}
+  colorRt2Final: {fileID: 0}
+  depthRt2: {fileID: 0}
+  lenticularRt: {fileID: 0}
+  lenticularMats:
+  - {fileID: 2100000, guid: e5b5d4499702a4e2493fa5b69f9140ca, type: 2}
+  genViewsMat: {fileID: 2100000, guid: 50b8d2aeda66b424092b758b2d3c8b41, type: 2}
+  dofMat1: {fileID: 2100000, guid: 23aab8549788d4bcea1b35e47e314c6d, type: 2}
+  dofMat2: {fileID: 2100000, guid: befebbe9e9aeb43c38bf2892172e5e8e, type: 2}
+  genViewsCompute: {fileID: 7200000, guid: c690a81183ab6420ebd921ba1f6a6879, type: 3}
+  genViewsDepthResult: {fileID: 0}
+  dofOn: 1
+  dofStrength: 1
+  dofVertical: 0.5
+  genViewsOn: 0
+  bridgeLogging: 4294967295
+  viewSettingsList:
+  - name: 16" + 27" portrait
+    width: 640
+    height: 800
+    viewCone: 45
+    fov: 35
+  - name: 16" + 27" landscape
+    width: 800
+    height: 640
+    viewCone: 45
+    fov: 35
+  - name: go
+    width: 480
+    height: 640
+    viewCone: 50
+    fov: 14
+  - name: legacy portrait
+    width: 640
+    height: 640
+    viewCone: 55
+    fov: 20
+  viewSettingsIndex: 0
+  overrideCamFov: 0
+  dontUseCalibrationViewSettings: 0
+  quiltOutput: {fileID: 8400000, guid: 9fa5bb7172f542544859c501b94f4745, type: 2}
+  quiltScale: 1
+  quiltMat: {fileID: 2100000, guid: 1b5e0b8c688020345b4189c6cb210ca5, type: 2}

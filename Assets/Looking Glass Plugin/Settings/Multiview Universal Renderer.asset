@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8431266632423208646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6df2d4e0316cae14ba8fa09509d4a320, type: 3}
+  m_Name: ReverseDepth
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  pass:
+    <renderPassEvent>k__BackingField: 300
+    m_ColorStoreActions: 0000000000000000000000000000000000000000000000000000000000000000
+    m_DepthStoreAction: 0
+    <requiresIntermediateTexture>k__BackingField: 0
+    m_OverriddenColorStoreActions: 
+    m_OverriddenDepthStoreAction: 0
+    m_PassName: ReverseDepthPass
+    m_RenderGraphSettings:
+      m_Version: 0
+      m_EnableRenderCompatibilityMode: 0
+    <overrideCameraTarget>k__BackingField: 0
+    <isBlitRenderPass>k__BackingField: 0
+    <useNativeRenderPass>k__BackingField: 1
+    <breakGBufferAndDeferredRenderPass>k__BackingField: 1
+    <renderPassQueueIndex>k__BackingField: -1
+    <renderTargetFormat>k__BackingField: 0000000000000000000000000000000000000000000000000000000000000000
+    m_InputAttachmentIsTransient: 
+    m_Input: 0
+    m_ClearFlag: 0
+    m_ClearColor:
+      r: 0
+      g: 0
+      b: 0
+      a: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
+  m_Name: Multiview Universal Renderer
+  m_EditorClassIdentifier: 
+  debugShaders:
+    debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
+    hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
+    probeVolumeSamplingDebugComputeShader: {fileID: 7200000, guid: 53626a513ea68ce47b59dc1299fe3959, type: 3}
+  probeVolumeResources:
+    probeVolumeDebugShader: {fileID: 0}
+    probeVolumeFragmentationDebugShader: {fileID: 0}
+    probeVolumeOffsetDebugShader: {fileID: 0}
+    probeVolumeSamplingDebugShader: {fileID: 0}
+    probeSamplingDebugMesh: {fileID: 0}
+    probeSamplingDebugTexture: {fileID: 0}
+    probeVolumeBlendStatesCS: {fileID: 0}
+  m_RendererFeatures: []
+  m_RendererFeatureMap: 
+  m_UseNativeRenderPass: 0
+  xrSystemData: {fileID: 0}
+  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
+  m_AssetVersion: 2
+  m_OpaqueLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_TransparentLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_DefaultStencilState:
+    overrideStencilState: 0
+    stencilReference: 0
+    stencilCompareFunction: 8
+    passOperation: 2
+    failOperation: 0
+    zFailOperation: 0
+  m_ShadowTransparentReceive: 0
+  m_RenderingMode: 2
+  m_DepthPrimingMode: 0
+  m_CopyDepthMode: 1
+  m_DepthAttachmentFormat: 0
+  m_DepthTextureFormat: 0
+  m_AccurateGbufferNormals: 0
+  m_IntermediateTextureMode: 0
+--- !u!114 &4515981345420366469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ba742ea483a4e1297932098cdc43aa, type: 3}
+  m_Name: LenticularRenderer
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  lenticularPass:
+    <renderPassEvent>k__BackingField: 1000
+    m_ColorStoreActions: 0000000000000000000000000000000000000000000000000000000000000000
+    m_DepthStoreAction: 0
+    <requiresIntermediateTexture>k__BackingField: 0
+    m_OverriddenColorStoreActions: 
+    m_OverriddenDepthStoreAction: 0
+    m_PassName: LenticularPass
+    m_RenderGraphSettings:
+      m_Version: 0
+      m_EnableRenderCompatibilityMode: 0
+    <overrideCameraTarget>k__BackingField: 0
+    <isBlitRenderPass>k__BackingField: 0
+    <useNativeRenderPass>k__BackingField: 1
+    <breakGBufferAndDeferredRenderPass>k__BackingField: 1
+    <renderPassQueueIndex>k__BackingField: -1
+    <renderTargetFormat>k__BackingField: 0000000000000000000000000000000000000000000000000000000000000000
+    m_InputAttachmentIsTransient: 
+    m_Input: 0
+    m_ClearFlag: 0
+    m_ClearColor:
+      r: 0
+      g: 0
+      b: 0
+      a: 1
+    multiviewData: {fileID: 11400000, guid: 67918278000168c448e90466efffaa0f, type: 2}
